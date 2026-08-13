@@ -45,6 +45,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan(process.env.NODE_ENV === "production" ? "combined" : "dev"));
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "Shopping mall API is running",
+    health: "/api/health",
+  });
+});
+
 app.use("/api", routes);
 
 app.use((req, res) => {

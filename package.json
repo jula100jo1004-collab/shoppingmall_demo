@@ -7,7 +7,7 @@
     "npm": "10.x"
   },
   "scripts": {
-    "start": "npm --prefix server start",
-    "heroku-postbuild": "npm --prefix server ci --omit=dev"
+    "start": "node server/src/server.js",
+    "heroku-postbuild": "cd server && npm ci --omit=dev"
   }
 }
