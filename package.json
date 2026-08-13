@@ -1,0 +1,13 @@
+{
+  "name": "shopping-mall-demo",
+  "private": true,
+  "description": "Heroku deploys the Express API from /server",
+  "engines": {
+    "node": "20.x",
+    "npm": "10.x"
+  },
+  "scripts": {
+    "start": "npm --prefix server start",
+    "heroku-postbuild": "npm --prefix server ci --omit=dev"
+  }
+}
